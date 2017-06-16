@@ -1,0 +1,37 @@
+1.-instalar opencv 2.4.11
+   desde el script install-open.sh
+
+2.-instalar librerias faltantes python
+ 
+   se instala pandas:
+   sudo apt-get install python-pandas
+ 
+   se instala setuptools:
+   sudo apt-get install python-setuptools
+ 
+   se instala scikit-image
+   sudo apt-get install python-skimage
+
+3.-instalar plantcv
+
+   se instalan dependencias:
+   sudo apt-get install git libopencv-dev python-opencv sqlite3 python-setuptools
+
+   se clona el repositorio de plantcv:
+   git clone https://github.com/danforthcenter/plantcv.git
+
+   chekar si se actualizo a master branch:
+   cd plantcv
+   git checkout v1.1
+   para volver git checkout master
+   
+   se instala plantcv :
+   sudo python setup.py install
+
+   para finalizar si todo es correcto insertar:
+   python -c 'import plantcv'
+
+   ademas de para pruebas mas extensas:
+   cd plantcv
+   py.test -v tests/tests.py
+
